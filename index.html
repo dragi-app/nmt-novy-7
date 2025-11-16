@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мінігра 7 — «Чистий фід»</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Динамічний фон та зірки -->
+  <div id="background"></div>
+  <div id="star-container"></div>
+
+  <!-- Стартовий екран -->
+  <div id="start-screen" class="overlay">
+    <div class="start-content">
+      <img src="character.png" alt="Персонаж" />
+      <h1>Мінігра 7 — «Чистий фід»</h1>
+      <p>
+        У нашому магічному світі навіть стрічка соцмереж має бути чистою. Натискай лише
+        на ті пости, де назви сервісів написані за новим правописом — з малої літери
+        та у правильному відмінку.
+      </p>
+      <button id="start-btn" onclick="startGame()">Почати</button>
+    </div>
+  </div>
+
+  <!-- Основний ігровий контейнер -->
+  <div id="game-container" class="hidden">
+    <div class="header">
+      <h2>Чистий фід</h2>
+      <p class="instructions">
+        Клікай на правильні пости. Пост вважається правильним, якщо назви соцмереж
+        пишуться з маленької літери та відмінюються по‑українськи.
+      </p>
+    </div>
+    <div class="scoreboard">
+      <div class="tries" id="tries-container"></div>
+      <div class="timer"><span id="timer">30</span>&nbsp;с</div>
+      <div class="progress"><span id="correct-count">0</span>/<span id="total-posts">0</span></div>
+    </div>
+    <div id="feed-container"></div>
+    <p id="explanation" class="hidden"></p>
+  </div>
+
+  <!-- Фінальний екран -->
+  <div id="finish-screen" class="overlay hidden">
+    <div class="finish-content">
+      <h2>Чудово!</h2>
+      <p id="finish-text"></p>
+      <div class="general-progress">
+        <div class="general-progress-bar">
+          <!-- заповнення встановимо у JS -->
+          <span class="general-progress-fill"></span>
+        </div>
+        <div class="general-progress-text">7 / 9</div>
+      </div>
+      <div class="cta-buttons">
+        <a href="https://apps.apple.com/ua/app/%D0%B4%D1%80%D0%B0%D0%B3%D1%96-%D0%BF%D1%96%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B4%D0%BE-%D0%BD%D0%BC%D1%82-%D0%B7%D0%BD%D0%BE/id6502047535?utm_source=landing&utm_medium=button&utm_campaign=app_download" target="_blank" rel="noopener">Драгі на iOS</a>
+        <a href="https://play.google.com/store/apps/details?id=ua.dragi.education&utm_source=landing&utm_medium=button&utm_campaign=app_download" target="_blank" rel="noopener">Драгі на Android</a>
+        <a href="https://t.me/dragi_space" target="_blank" rel="noopener">Телеграм Драгі</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
