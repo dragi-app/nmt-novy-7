@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     finishTextEl.innerHTML =
       'Ти виправив <strong>' +
       correctCount +
-      '</strong> постів. Кодове слово <strong>у&nbsp;тіктоці</strong> — надішли його нашому магічному боту!';
+      '</strong> постів. Кодове словосполучення "<strong>у&nbsp;тіктоці</strong>" — надішли його нашому магічному боту!';
     // Заповнити прогрес
     const progress = 7 / 9;
     if (progressFill) {
